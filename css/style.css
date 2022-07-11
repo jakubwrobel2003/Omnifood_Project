@@ -6,11 +6,17 @@
 
 
 - font weights:
-Default:400
+Default: 400
+MEDIUM: 500
+SEMI-BOLD: 600
+BOLD: 700
 - line heights:
-Default:1
+Default: 1
+Small: 1.05
+medium: 1.2
+Pagagraph default: 1.6
 
- - FONT SIZE SYSTEM (px)
+- FONT SIZE SYSTEM (px)
 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
             
 --- 02 COLORS
@@ -26,10 +32,15 @@ Default:1
 
 ---06 BORDER-RADIUS
 
+Default: 9px
 ---07 WHITESPACE
 
 -SPACING SYSTEM (px)
 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+letter-spacing:
+-0.5px
+0.75px
 
 
 */
@@ -48,32 +59,53 @@ body {
   font-weight: 400;
   color: #555;
 }
-.section-hero {
-  background-color: #fdf2e9;
-  padding: 9.6rem 0;
-}
-
-.hero {
-  max-width: 130rem;
+/* ***************************** */
+/* GENERAL REUSEBLE COMPONENTS */
+/* ***************************** */
+.container {
+  /* 1140 */
+  max-width: 120rem;
   margin: 0 auto;
+  padding: 0 3.2rem;
+}
+.grid {
   display: grid;
   gap: 9.6rem;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
+}
+.gird--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+.gird--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.heading-secondary,
+.heading-primary {
+  color: #333;
+  letter-spacing: -0.5px;
+  font-weight: 700;
 }
 .heading-primary {
   font-size: 5.2rem;
-  font-weight: 700;
   line-height: 1.05;
-  color: #333;
-  letter-spacing: -0.5px;
   margin-bottom: 3.2rem;
 }
-.hero-description {
-  font-size: 2rem;
-  line-height: 1.5;
-  margin-bottom: 4.8rem;
+
+.heading-secondary {
+  font-size: 4.4rem;
+  line-height: 1.2;
+  margin-bottom: 9.6rem;
 }
+.subheading {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #cf711f;
+  text-transform: uppercase;
+  margin-bottom: 1.6rem;
+  letter-spacing: -0.75px;
+}
+
 .btn:link,
 .btn:visited {
   display: inline-block;
@@ -112,6 +144,79 @@ body {
 .margin-right-sm {
   margin-right: 1.6rem !important;
 }
+
+/* ***************************** */
+/* HEADER */
+/* ***************************** */
+.header {
+  background-color: #fdf2e9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* BECOUSE WE WANT HEADER TO BE STICKY LEATER */
+  height: 9.6rem;
+  padding: 0 4.8rem;
+}
+.logo {
+  height: 2.2rem;
+}
+/* ***************************** */
+/* NAV */
+/* ***************************** */
+.main-nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 3.2rem;
+}
+.main-nav-link:link,
+.main-nav-link:visited {
+  text-decoration: none;
+  display: inline-block;
+  color: #333;
+  font-weight: 500;
+  font-size: 1.8rem;
+  transition: all 0.3;
+}
+.main-nav-link:hover,
+.main-nav-link:active {
+  color: #cf711f;
+}
+.main-nav-link.nav-cta:link,
+.main-nav-link.nav-cta:visited {
+  padding: 1.2rem 2.4rem;
+  border-radius: 9px;
+  color: #fff;
+  background-color: #e67e22;
+}
+.main-nav-link.nav-cta:hover,
+.main-nav-link.nav-cta:active {
+  background-color: #cf711f;
+}
+/* ***************************** */
+/* HERO SECTION */
+/* ***************************** */
+.section-hero {
+  background-color: #fdf2e9;
+  padding: 4.8rem 0 9.6rem 0;
+}
+
+.hero {
+  max-width: 130rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+  display: grid;
+  gap: 9.6rem;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.hero-description {
+  font-size: 2rem;
+  line-height: 1.5;
+  margin-bottom: 4.8rem;
+}
+
 .hero-img {
   width: 100%;
 }
@@ -141,4 +246,14 @@ body {
 .delivered-text span {
   color: #cf711f;
   font-weight: 700;
+}
+/* ***************************** */
+/* HOW IT WORKS SECTION */
+/* ***************************** */
+.section-how {
+  padding: 9.6rem 0;
+}
+
+.step-img {
+  width: 50%;
 }
