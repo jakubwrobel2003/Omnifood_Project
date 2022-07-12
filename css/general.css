@@ -23,6 +23,7 @@ Pagagraph default: 1.6
 
 -PRIMARY: #e67e22
 -TINTS: #fdf2e9
+#fae5d3
 -SHADES:
 -ACCENTS:
 -GREYS: 
@@ -70,7 +71,6 @@ body {
 }
 .grid {
   display: grid;
-
   row-gap: 9.6rem;
   column-gap: 6.4rem;
 }
@@ -80,7 +80,9 @@ body {
 .gird--3-cols {
   grid-template-columns: repeat(3, 1fr);
 }
-
+.grid--center-v {
+  align-items: center;
+}
 .heading-secondary,
 .heading-primary,
 .heading-tertiary {
