@@ -128,6 +128,17 @@ body {
   letter-spacing: -0.75px;
 }
 
+.btn-form {
+  background-color: #45260a;
+  color: #fdf2e9;
+  align-items: end;
+  padding: 1.2rem 3.2rem;
+}
+.btn-form::hover {
+  background-color: #fff;
+  color: #555;
+}
+.btn,
 .btn:link,
 .btn:visited {
   display: inline-block;
@@ -141,6 +152,10 @@ body {
   /* dodwac tylko do orgnalnego miejsca */
   /* transition: background-color 0.3s; */
   transition: all 0.3s;
+  /* przycisk */
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
 }
 .btn--full:link,
 .btn--full:visited {
@@ -178,6 +193,13 @@ body {
   color: #cf711f;
   border-bottom: 1px solid transparent;
 }
+*:focus {
+  outline: none;
+  /* outline: 4px dotted #e67e22;
+  outline-offset: 8px; */
+  box-shadow: 0 0 0 0.8rem rgba(230, 125, 34, 0.5);
+}
+
 /*  */
 /* HELPER */
 /*  */
