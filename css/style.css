@@ -453,7 +453,7 @@
   margin-bottom: 1.2rem;
 }
 .cta-form input,
-.cta-from select {
+.cta-form select {
   width: 100%;
   padding: 1.2rem;
   font-size: 1.8rem;
@@ -467,12 +467,17 @@
 .cta-form input::placeholder {
   color: #aaa;
 }
-.cta-form select {
-}
+
 .cta-form button {
 }
 .cta *:focus {
   outline: none;
 
   box-shadow: 0 0 0 0.8rem rgba(253, 242, 233, 0.5);
+}
+/* ***************************** */
+/* FOOTER REUSEBLE COMPONENTS */
+/* ***************************** */
+.footer {
+  padding: 9.6rem 0;
 }

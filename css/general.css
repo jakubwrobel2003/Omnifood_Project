@@ -92,6 +92,9 @@ body {
 .gird--4-cols {
   grid-template-columns: repeat(4, 1fr);
 }
+.grid--5-cols {
+  grid-template-columns: repeat(5, 1fr);
+}
 .grid--center-v {
   align-items: center;
 }
@@ -131,7 +134,7 @@ body {
 .btn-form {
   background-color: #45260a;
   color: #fdf2e9;
-  align-items: end;
+  align-self: end;
   padding: 1.2rem 3.2rem;
 }
 .btn-form::hover {
