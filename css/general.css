@@ -25,6 +25,7 @@ Pagagraph default: 1.6
 -TINTS: #fdf2e9
 #fae5d3
 -SHADES:
+ box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
 -ACCENTS:
 -GREYS: 
 #6f6f6f
@@ -74,12 +75,25 @@ body {
   display: grid;
   row-gap: 9.6rem;
   column-gap: 6.4rem;
+  /* margin-bottom: 9.6rem; */
+}
+/* .grid:last-child {
+  margin-bottom: 0;
+} */
+.grid:not(:last-child) {
+  margin-bottom: 9.6rem;
 }
 .gird--2-cols {
   grid-template-columns: repeat(2, 1fr);
 }
 .gird--3-cols {
   grid-template-columns: repeat(3, 1fr);
+}
+.gird--4-cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+.grid--5-cols {
+  grid-template-columns: repeat(5, 1fr);
 }
 .grid--center-v {
   align-items: center;
@@ -117,6 +131,17 @@ body {
   letter-spacing: -0.75px;
 }
 
+.btn-form {
+  background-color: #45260a;
+  color: #fdf2e9;
+  align-self: end;
+  padding: 1.2rem 3.2rem;
+}
+.btn-form::hover {
+  background-color: #fff;
+  color: #555;
+}
+.btn,
 .btn:link,
 .btn:visited {
   display: inline-block;
@@ -130,6 +155,10 @@ body {
   /* dodwac tylko do orgnalnego miejsca */
   /* transition: background-color 0.3s; */
   transition: all 0.3s;
+  /* przycisk */
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
 }
 .btn--full:link,
 .btn--full:visited {
@@ -167,6 +196,13 @@ body {
   color: #cf711f;
   border-bottom: 1px solid transparent;
 }
+*:focus {
+  outline: none;
+  /* outline: 4px dotted #e67e22;
+  outline-offset: 8px; */
+  box-shadow: 0 0 0 0.8rem rgba(230, 125, 34, 0.5);
+}
+
 /*  */
 /* HELPER */
 /*  */
@@ -178,6 +214,24 @@ body {
 }
 .center-text {
   text-align: center;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+.list-item {
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+.list-icon {
+  width: 3rem;
+  height: 3rem;
+  color: #e67e22;
 }
 strong {
   font-weight: 500;
