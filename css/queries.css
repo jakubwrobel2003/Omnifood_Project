@@ -111,6 +111,7 @@ INstead 1,rem-1em =16px*/
   /* MOBILE NAV */
   .btn-mobile-nav {
     display: block;
+    z-index: 9999;
   }
 
   .main-nav {
