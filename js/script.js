@@ -10,23 +10,6 @@ console.log(h1);
 //   h1.style.backgroundColor = "red";
 //   h1.style.padding = "5rem";
 // });
-//////////////////////////////////////////////////////
-//set current year
-//////////////////////////////////////////////////////
-const yearEL = document.querySelector(".year");
-const currentYear = new Date().getFullYear();
-console.log(currentYear);
-yearEL.textContent = currentYear;
-
-//////////////////////////////////////////////////////
-//Make mobile bavigation work
-//////////////////////////////////////////////////////
-const btnNavEl = document.querySelector(".btn-mobile-nav");
-const headerEl = document.querySelector(".header");
-
-btnNavEl.addEventListener("click", function () {
-  headerEl.classList.toggle("nav-open");
-});
 
 //////////////////////////////////////////////////////
 //SMooth scroling animnation
@@ -56,6 +39,23 @@ allLinks.forEach(function (link) {
     if (link.classList.contains("main-nav-link"))
       headerEl.classList.toggle("nav-open");
   });
+});
+//////////////////////////////////////////////////////
+//set current year
+//////////////////////////////////////////////////////
+const yearEL = document.querySelector(".year");
+const currentYear = new Date().getFullYear();
+console.log(currentYear);
+yearEL.textContent = currentYear;
+
+//////////////////////////////////////////////////////
+//Make mobile bavigation work
+//////////////////////////////////////////////////////
+const btnNavEl = document.querySelector(".btn-mobile-nav");
+const headerEl = document.querySelector(".header");
+
+btnNavEl.addEventListener("click", function () {
+  headerEl.classList.toggle("nav-open");
 });
 
 //////////////////////////////////////////////////////
