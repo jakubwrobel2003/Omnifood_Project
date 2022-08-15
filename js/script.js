@@ -1,6 +1,6 @@
-console.log("hello world");
+console.log("Hello world!");
 
-const myName = "kuba wrobel";
+const myName = "Jonas Schmedtmann";
 const h1 = document.querySelector(".heading-primary");
 console.log(myName);
 console.log(h1);
@@ -11,9 +11,24 @@ console.log(h1);
 //   h1.style.padding = "5rem";
 // });
 
-//////////////////////////////////////////////////////
-//SMooth scroling animnation
-//////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////
+// Set current year
+const yearEl = document.querySelector(".year");
+const currentYear = new Date().getFullYear();
+yearEl.textContent = currentYear;
+
+///////////////////////////////////////////////////////////
+// Make mobile navigation work
+
+const btnNavEl = document.querySelector(".btn-mobile-nav");
+const headerEl = document.querySelector(".header");
+
+btnNavEl.addEventListener("click", function () {
+  headerEl.classList.toggle("nav-open");
+});
+
+///////////////////////////////////////////////////////////
+// Smooth scrolling animation
 
 const allLinks = document.querySelectorAll("a:link");
 
@@ -40,44 +55,29 @@ allLinks.forEach(function (link) {
       headerEl.classList.toggle("nav-open");
   });
 });
-//////////////////////////////////////////////////////
-//set current year
-//////////////////////////////////////////////////////
-const yearEL = document.querySelector(".year");
-const currentYear = new Date().getFullYear();
-console.log(currentYear);
-yearEL.textContent = currentYear;
 
-//////////////////////////////////////////////////////
-//Make mobile bavigation work
-//////////////////////////////////////////////////////
-const btnNavEl = document.querySelector(".btn-mobile-nav");
-const headerEl = document.querySelector(".header");
-
-btnNavEl.addEventListener("click", function () {
-  headerEl.classList.toggle("nav-open");
-});
-
-//////////////////////////////////////////////////////
-//Sticky navgation
-//////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////
+// Sticky navigation
 
 const sectionHeroEl = document.querySelector(".section-hero");
+
 const obs = new IntersectionObserver(
   function (entries) {
     const ent = entries[0];
     console.log(ent);
+
     if (ent.isIntersecting === false) {
       document.body.classList.add("sticky");
     }
+
     if (ent.isIntersecting === true) {
       document.body.classList.remove("sticky");
     }
   },
   {
-    //in the viewport
+    // In the viewport
     root: null,
-    thershold: 0,
+    threshold: 0,
     rootMargin: "-80px",
   }
 );

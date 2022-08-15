@@ -303,7 +303,7 @@
 */
 
 /**************************/
-/* Fixing safari flexbox gap*/
+/* Fixing Safari flexbox gap */
 /**************************/
 
 .no-flexbox-gap .main-nav-list li:not(:last-child) {
